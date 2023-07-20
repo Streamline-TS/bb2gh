@@ -25,12 +25,12 @@ This Python script helps migrate repositories from Bitbucket to GitHub.
 2. Run the script using Python 3:
 
     ```bash
-    python3 repo_migration.py
+    python repo_migration.py
     ```
 
 The script will clone each repository from Bitbucket, create a new repository under the given GitHub organization, and push the repository to GitHub. This is done using the `--mirror` option in Git, which ensures that all branches and commits are transferred as-is.
 
-If an error occurs during the process (for example, due to a failed command), the script will print an error message and prompt the user to either continue with the next repository ('c') or stop the execution ('s'). Input is immediate and does not require pressing Enter.
+If an error occurs during the process (for example, due to a failed command), the script will print an error message and prompt the user to either continue with the next repository ('c') or stop the execution ('s').
 
 ## Notes
 
