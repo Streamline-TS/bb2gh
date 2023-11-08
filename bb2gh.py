@@ -6,10 +6,11 @@ import os
 import shutil
 import sys
 import config
-
-# Wait for 'c' or 's' keypress on either Windows or Unix-based systems
+ 
 def get_single_keypress():
-    
+    """
+    Wait for 'c' or 's' keypress on either Windows or Unix-based systems.
+    """
     try:
         import termios
     except ImportError:
@@ -36,8 +37,10 @@ def get_single_keypress():
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
 
 
-# Run the shell command
 def run_command(command):
+    """
+    Run the shell command and return True if it was successful, False otherwise.
+    """
     try:
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError:
